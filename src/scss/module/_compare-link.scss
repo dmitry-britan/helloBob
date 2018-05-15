@@ -1,0 +1,56 @@
+.compare-link{
+	display: flex;
+	align-items: center;
+	position: relative;
+	text-decoration: none;
+}
+.compare-link__icon{
+	margin-right: 7px;
+
+	.mobile-nav__compare & {
+		max-height: 18px;
+		margin-right: 20px;
+	}
+}
+.compare-link__icon svg {
+	max-height: 16px;
+	max-width: 24px;
+	fill: #565f66;
+
+	.mobile-nav__compare & {
+		max-height: 20px;
+		max-width: 30px;
+	}
+}
+.compare-link__qty{
+	position: absolute;
+	left: 10px; top: -7px;
+	width: 16px;
+	height: 16px;
+	background-color: $color__primary;
+	border-radius: 50%;
+	font-size: 11px;
+	line-height: 16px;
+	text-align: center;
+	color: #ffffff;
+
+	.mobile-nav__compare & {
+		left: 14px;
+		top: -11px;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		font-size: 16px;
+	}
+}
+.compare-link__text{
+	font-size: 14px;
+	line-height: 20px;
+	color: $color__primary;
+
+	.mobile-nav__compare & {
+		font-size: 24px;
+		line-height: 24px;
+		color: $color__primary;
+	}
+}

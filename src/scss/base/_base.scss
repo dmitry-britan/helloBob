@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html, body {
+  &.mobile-menu-opened{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+body{
+  font-family: "Vida", sans-serif;
+}
+.container{
+  min-width: 320px;
+  max-width: 1170px;
+	margin: 0 auto;
+  padding: 0 15px;
+}

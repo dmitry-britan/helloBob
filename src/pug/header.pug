@@ -1,0 +1,25 @@
+header.header
+	.header__inner
+		.header__logo
+			a(href="#").logo
+				img(src="images/logo.png", alt="Company").logo__img
+		.header__nav
+			nav.nav
+				ul.nav__list
+					each item in [1,2,3,4,5]
+						li.nav__item
+							a(href="").nav__link
+								| Раздел №#{item}
+		.header__compare
+			include parts/compare-link
+		.header__account
+			a(href="").account-link
+				span.account-link__text
+					| Личный кабинет
+		.header__phone
+			include parts/phone-link
+		.header__hamburger
+			.hamburger.hamburger--spin.js-nav-toggle
+				.hamburger__box
+					.hamburger__inner
+include parts/mobile-nav

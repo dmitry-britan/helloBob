@@ -1,0 +1,69 @@
+extends pug/base
+
+append vars
+  - body.classList.push('page page--index')
+
+block content
+  //- HERO
+  .hero
+    .hero__picture(style="background-image: url('./images/hero/hero.jpg')")
+    .hero__body
+      p.hero__text
+        | Адрес 123
+      h1.hero__title
+        | Объект №51
+  .page__content
+    //- MAIN
+    main.page__main
+      h2.page__title
+        | Уведомления
+      include pug/data/notice-content
+      each notice in notices
+        article.notice.js-notice
+          time.notice__date
+            =notice.date
+          h3.notice__title
+            =notice.title
+          .notice__body.js-notice-body
+            =notice.body
+          .notice__toggle.js-notice-toggle
+    //- SIDEBAR
+    aside.page__sidebar.sidebar
+      //- Property Menu
+      nav.property-menu
+        ul.property-menu__list
+          -var properties = ['Документы', 'План', 'Оплата', 'Стадии', 'Online', 'Инструкция'];
+          each property in properties
+            li.property-menu__item
+              a(href="").property-menu__link
+                span.property-menu__link-text= property
+          li.property-menu__item
+            a(href="").property-menu__link.is--active
+              span.property-menu__link-text
+                | Уведомления
+                span.tag.tag--primary.tag--rt 6
+      //- Property Items
+      .page__sidebar-property
+        each i in [1,2]
+          article.property-item
+            h3.property-item__header
+              | Адрес 123
+            .property-item__body
+              p.property-item__text
+                | Адрес 123
+              a(href="").property-item__link
+                | Перейти
+                i.property-item__link-icon
+  section.section.section--grey
+    .news
+      .news__inner.js-news-slider
+        each news in [{tag: 'Акция', state:'is--special'},{tag: 'Новости', state:''},{tag: 'Акции', state:''},{tag: 'События', state:''}]
+          .news__item
+            .news__item-header
+              time.news__item-date
+                | 14/07
+              div(class="news__item-tag "+news.state)
+                span.news__item-tag-inner= news.tag
+            a(href="").news__item-body
+              | Гелиоцентрическое расстояние, как принято считать, продольно перечеркивает липарит.
+block body-end

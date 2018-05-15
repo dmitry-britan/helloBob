@@ -1,0 +1,18 @@
+.tag{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+}
+.tag--rt {
+	right: -7px;
+	top: -7px;
+}
+.tag--primary{
+	background-color: $color__primary;
+	color: #ffffff;
+}

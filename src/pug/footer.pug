@@ -1,0 +1,54 @@
+// FOOTER
+footer.footer
+  .footer__inner
+    .footer__left
+      .footer__social
+        //- Social Icons
+        .social-icons
+          a(href="").social-icons__link
+            +svg("facebook")
+          a(href="").social-icons__link
+            +svg("vk")
+          a(href="").social-icons__link
+            +svg("instagram")
+          a(href="").social-icons__link
+            +svg("odnoklassniki")
+          a(href="").social-icons__link
+            +svg("youtube")
+      .footer__contacts
+        //- Contacts Block
+        .contacts-block
+          a(href="tel:+70000000000").contacts-block__phone
+            | +7 000 000-00-00
+          p.contacts-block__address
+            | Адрес, улица, дом, корпус
+          a(href="mailto:post@comp.com").contacts-block__email
+            | post@comp.com
+
+    .footer__right
+      .footer__menu
+        nav.menu
+          h4.menu__title Раздел №1
+          ul.menu__list
+            each item in [1,2,3,4,5,6]
+              li.menu__item
+                a(href="").menu__link
+                  | Подраздел №#{item}
+      .footer__menu
+        nav.menu
+          h4.menu__title Раздел №2
+          ul.menu__list
+            each item in [1,2,3,4]
+              li.menu__item
+                a(href="").menu__link
+                  | Подраздел №#{item}
+      .footer__menu.two-columns
+        nav.menu
+          h4.menu__title Раздел №3
+          ul.menu__list
+            each item in [1,2,3,4,5,6,1,2,3]
+              li.menu__item
+                a(href="").menu__link
+                  | Подраздел №#{item}
+
+// /FOOTER

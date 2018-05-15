@@ -1,0 +1,61 @@
+.header{
+	padding: 0 15px;
+	@include media('<=1150px'){
+		padding: 0 40px;
+	}
+}
+.header__inner{
+	display: flex;
+	align-items: center;
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 25px 11px 20px 0;
+}
+.header__logo{
+	margin-right: 39px;
+	@include media('<1290px'){
+		margin-right: 20px;
+	}
+	@include media('<=1150px'){
+		margin-right: auto;
+	}
+}
+.header__nav{
+	margin-right: auto;
+	@include media('<=1150px'){
+		display: none;
+	}
+}
+.header__compare{
+	margin-right: 23px;
+	@include media('<1290px'){
+		margin-right: 16px;
+	}
+	@include media('<=1150px'){
+		display: none;
+	}
+}
+.header__account{
+	margin-right: 23px;
+	@include media('<1290px'){
+		margin-right: 16px;
+	}
+	@include media('<=1150px'){
+		display: none;
+	}
+}
+.header__phone{
+	@include media('<=1150px'){
+		margin-right: 32px;
+
+		.mobile-menu-opened & {
+			opacity: 0;
+		}
+	}
+}
+.header__hamburger{
+	display: none;
+	@include media('<=1150px'){
+		display: block;
+	}
+}

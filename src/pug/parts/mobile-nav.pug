@@ -1,0 +1,17 @@
+// MOBILE NAVIGATION
+nav.mobile-nav.js-mobile-nav
+  .mobile-nav__inner
+    .mobile-nav__body
+      ul.mobile-nav__list
+        each item in [1,2,3,4,5]
+          li.mobile-nav__item
+            a(href="").mobile-nav__link
+              | Раздел №#{item}
+    .mobile-nav__footer
+      .mobile-nav__compare
+        include compare-link
+      .mobile-nav__account
+        a(href="").mobile-nav__account-link
+          | Личный кабинет
+      .mobile-nav__phone
+        include phone-link

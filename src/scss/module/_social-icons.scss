@@ -1,0 +1,25 @@
+.social-icons{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 26px;
+	@include media('<=640px'){
+		margin-bottom: 12px;
+	}
+}
+.social-icons__link{
+	margin: 0 16px 10px 5px;
+	fill: $color__primary;
+	transition: all 300ms linear;
+	&:last-of-type{
+		margin-right: 0;
+	}
+	&:hover{
+		fill: $color__base;
+	}
+	svg{
+		max-height: 18px;
+		max-width: 18px;
+	}
+}

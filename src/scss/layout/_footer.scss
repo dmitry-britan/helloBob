@@ -1,0 +1,80 @@
+.footer{
+	padding: 39px 0 40px;
+}
+.footer__inner{
+	display: flex;
+	align-items: flex-start;
+	max-width: 1290px;
+	padding: 0 72px;
+	margin: 0 auto;
+	@include media('<=640px'){
+		flex-wrap: wrap;
+		padding: 0 40px;
+	}
+}
+.footer__left{
+	width: 350px;
+	@include media('<1290px'){
+		width: 280px;
+	}
+	@include media('<768px'){
+		width: 240px;
+	}
+	@include media('<=640px'){
+		width: 100%;
+	}
+}
+.footer__right{
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 350px);
+	padding-left: 41px;
+	@include media('<1290px'){
+		width: calc(100% - 280px);
+		padding-left: 0;
+	}
+	@include media('<992px'){
+		flex-wrap: wrap;
+	}
+	@include media('<768px'){
+		width: calc(100% - 240px);
+	}
+	@include media('<=640px'){
+		width: 100%;
+	}
+}
+.footer__social{}
+.footer__contacts{
+	@include media('<=640px'){
+		margin-bottom: 24px;
+	}
+}
+.footer__menu{
+	width: 25%;
+	@include media('<1290px'){
+		padding-left: 15px;
+	}
+	@include media('<992px'){
+		width: 50%;
+		margin-bottom: 42px;
+		padding-left: 0;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	@include media('<=640px'){
+		width: 100%;
+		margin-bottom: 0;
+	}
+	&.two-columns{
+		width: 50%;
+		padding-left: 28px;
+		@include media('<1290px'){
+			padding-left: 15px;
+		}
+		@include media('<992px'){
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+}

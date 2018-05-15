@@ -1,0 +1,9 @@
+.icon {
+	display: inline-block;
+}
+.icon-compare{
+	@include sprite('compare');
+}
+.icon-phone{
+	@include sprite('phone');
+}

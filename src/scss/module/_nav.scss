@@ -1,0 +1,25 @@
+.nav{
+	margin: 0;
+	padding: 0;
+}
+.nav__list{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.nav__item{
+	margin-right: 21px;
+	&:last-child{
+		margin-right: 0;
+	}
+	@include media('<1290px'){
+		margin-right: 12px;
+	}
+}
+.nav__link{
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: none;
+	color: $color__primary;
+}
