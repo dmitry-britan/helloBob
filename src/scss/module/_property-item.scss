@@ -18,6 +18,18 @@
 			padding-right: 0;
 		}
 	}
+	@include media('<560px'){
+		flex-grow: 1;
+		flex-basis: 100%;
+		margin: 0 0 10px;
+		padding: 10px 0 20px;
+		border: none;
+		border-bottom: 1px solid rgba(#919191, .13);
+
+		&:last-of-type{
+			border: none;
+		}
+	}
 }
 .property-item__header{
 	margin: 0 0 10px;

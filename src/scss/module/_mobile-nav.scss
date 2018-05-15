@@ -25,11 +25,19 @@
   min-height: 660px;
   height: 100%;
   padding: 80px 40px 40px;
+  @include media('<560px'){
+    padding: 10px 20px 100px;
+    height: auto;
+    min-height: 0;
+  }
 }
 .mobile-nav__body{
   display: flex;
   flex-direction: column;
   margin: 0 0 auto;
+  @include media('<560px'){
+    margin-bottom: 30px;
+  }
 }
 .mobile-nav__footer{}
 .mobile-nav__compare{
@@ -38,6 +46,9 @@
 .mobile-nav__phone{}
 .mobile-nav__account{
   margin-bottom: 60px;
+  @include media('<560px') {
+    margin-bottom: 30px;
+  }
 }
 .mobile-nav__account-link{
   display: block;

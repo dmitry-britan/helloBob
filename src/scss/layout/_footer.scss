@@ -11,6 +11,9 @@
 		flex-wrap: wrap;
 		padding: 0 40px;
 	}
+	@include media('<560px'){
+		padding: 0 20px;
+	}
 }
 .footer__left{
 	width: 350px;

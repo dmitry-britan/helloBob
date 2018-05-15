@@ -3,6 +3,9 @@
 	@include media('<=1150px'){
 		padding: 0 40px;
 	}
+	@include media('<560px'){
+		padding: 0 20px;
+	}
 }
 .header__inner{
 	display: flex;
@@ -10,6 +13,9 @@
 	max-width: 1350px;
 	margin: 0 auto;
 	padding: 25px 11px 20px 0;
+	@include media('<=1150px'){
+		padding-right: 0;
+	}
 }
 .header__logo{
 	margin-right: 39px;
@@ -51,6 +57,9 @@
 		.mobile-menu-opened & {
 			opacity: 0;
 		}
+	}
+	@include media('<560px'){
+		display: none;
 	}
 }
 .header__hamburger{

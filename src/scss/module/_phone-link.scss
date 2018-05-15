@@ -15,6 +15,10 @@
 		margin-right: 42px;
 		font-size: 40px;
 		line-height: 40px;
+		@include media('<560px') {
+			margin-right: 24px;
+			font-size: 24px;
+		}
 	}
 }
 .phone-link__icon{

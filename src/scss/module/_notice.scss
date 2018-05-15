@@ -6,10 +6,16 @@
 	border: 1px solid #edeeee;
 	background-color: #ffffff;
 	transition: background 300ms linear;
+	@include media('<560px'){
+		padding-right: 48px;
+	}
 	&:first-of-type{
 		padding-bottom: 35px;
 		.notice__toggle {
 			top: 57px;
+			@include media('<560px'){
+				top: 20px;
+			}
 		}
 	}
 	&.is--active {
@@ -47,6 +53,10 @@
 	border-radius: 50%;
 	border: 1px solid rgba(#000, .4);
 	cursor: pointer;
+	@include media('<560px'){
+		top: 20px;
+		right: 20px;
+	}
 
 	&:before,
 	&:after{
